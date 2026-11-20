@@ -1,0 +1,10 @@
+metric,value
+avg_wait,1.6735883299952548
+max_wait,4.390472900013265
+utilization,0.5705636569219175
+throughput,0.3687365492508465
+max_queue,2
+parked,5
+done,5
+cancelled,0
+elapsed,13.55981665001309

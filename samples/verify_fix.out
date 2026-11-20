@@ -1,0 +1,71 @@
+== Timeline ==
+    0.00s  STARTED   vehicle=-   ticket=-   slot=-  occupied=0
+    1.71s  ARRIVED   vehicle=1   ticket=0   slot=-  occupied=0
+    1.72s  PARKED    vehicle=1   ticket=0   slot=1  occupied=1
+    2.44s  ARRIVED   vehicle=2   ticket=1   slot=-  occupied=1
+    2.44s  PARKED    vehicle=2   ticket=1   slot=2  occupied=2
+    4.05s  LEAVING   vehicle=1   ticket=0   slot=1  occupied=2
+    4.05s  DONE      vehicle=1   ticket=0   slot=1  occupied=1
+    4.39s  ARRIVED   vehicle=3   ticket=2   slot=-  occupied=1
+    4.39s  PARKED    vehicle=3   ticket=2   slot=1  occupied=2
+    4.71s  ARRIVED   vehicle=4   ticket=3   slot=-  occupied=2
+    4.72s  PARKED    vehicle=4   ticket=3   slot=3  occupied=3
+    5.23s  ARRIVED   vehicle=5   ticket=4   slot=-  occupied=3
+    6.56s  ARRIVED   vehicle=6   ticket=5   slot=-  occupied=3
+    6.84s  LEAVING   vehicle=3   ticket=2   slot=1  occupied=3
+    6.84s  DONE      vehicle=3   ticket=2   slot=1  occupied=2
+    6.85s  PARKED    vehicle=5   ticket=4   slot=1  occupied=3
+    6.88s  LEAVING   vehicle=2   ticket=1   slot=2  occupied=3
+    6.88s  DONE      vehicle=2   ticket=1   slot=2  occupied=2
+    6.89s  PARKED    vehicle=6   ticket=5   slot=2  occupied=3
+    7.39s  LEAVING   vehicle=4   ticket=3   slot=3  occupied=3
+    7.39s  DONE      vehicle=4   ticket=3   slot=3  occupied=2
+    8.35s  ARRIVED   vehicle=7   ticket=6   slot=-  occupied=2
+    8.36s  PARKED    vehicle=7   ticket=6   slot=3  occupied=3
+    9.58s  LEAVING   vehicle=6   ticket=5   slot=2  occupied=3
+    9.58s  DONE      vehicle=6   ticket=5   slot=2  occupied=2
+    9.60s  LEAVING   vehicle=5   ticket=4   slot=1  occupied=2
+    9.60s  DONE      vehicle=5   ticket=4   slot=1  occupied=1
+    9.88s  ARRIVED   vehicle=8   ticket=7   slot=-  occupied=1
+    9.89s  PARKED    vehicle=8   ticket=7   slot=1  occupied=2
+   10.49s  LEAVING   vehicle=7   ticket=6   slot=3  occupied=2
+   10.49s  DONE      vehicle=7   ticket=6   slot=3  occupied=1
+   11.79s  ARRIVED   vehicle=9   ticket=8   slot=-  occupied=1
+   11.80s  PARKED    vehicle=9   ticket=8   slot=2  occupied=2
+   12.52s  ARRIVED   vehicle=10  ticket=9   slot=-  occupied=2
+   12.53s  PARKED    vehicle=10  ticket=9   slot=3  occupied=3
+   13.01s  LEAVING   vehicle=8   ticket=7   slot=1  occupied=3
+   13.01s  DONE      vehicle=8   ticket=7   slot=1  occupied=2
+   14.93s  LEAVING   vehicle=9   ticket=8   slot=2  occupied=2
+   14.93s  DONE      vehicle=9   ticket=8   slot=2  occupied=1
+   17.29s  LEAVING   vehicle=10  ticket=9   slot=3  occupied=1
+   17.29s  DONE      vehicle=10  ticket=9   slot=3  occupied=0
+   17.97s  FINISHED  vehicle=-   ticket=-   slot=-  occupied=0
+== Metrics (simulated seconds, timing rounded to 2 decimals) ==
+Average wait: 0.20 s
+Max wait: 1.62 s
+Utilization: 0.57
+Throughput: 0.56 vehicles/s
+Max queue length: 2
+== Summary ==
+Config: seed=42 capacity=3 vehicles=10 policy=fifo time_scale=0.02
+Plan (exact, from seed):
+  id=1 arrival=1.4591401976868257 park=2.0750322656680007 priority=NORMAL
+  id=2 arrival=2.2939563049100595 park=4.209413642492037 priority=NORMAL
+  id=3 arrival=4.132225656467328 park=2.2608164978882486 priority=NORMAL
+  id=4 arrival=4.676921485624433 park=2.65591392441081 priority=NORMAL
+  id=5 arrival=5.2167254401502285 park=2.5965129520599453 priority=NORMAL
+  id=6 arrival=6.534137661055054 park=2.66132186612209 priority=NORMAL
+  id=7 arrival=8.248283346071794 park=2.019496279034183 priority=NORMAL
+  id=8 arrival=9.795492438554135 park=3.0207515495539754 priority=VIP
+  id=9 arrival=11.731312046864307 park=3.00978363533788 priority=VIP
+  id=10 arrival=12.376386612114503 park=4.5424830990423795 priority=NORMAL
+Admission order: 1 2 3 4 5 6 7 8 9 10
+Counts:
+  Arrived: 10
+  Parked: 10
+  Done: 10
+  Cancelled: 0
+Result: complete
+CSV events: verify_fix.csv
+CSV summary: verify_fix.summary.csv
